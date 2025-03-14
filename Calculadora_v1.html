@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+
+    <h1>Calculadora Financeira</h1>
+    <h2>Projeto BeeAware</h2>
+    <br>
+
+    Identificação da colmeia (Id):
+    <input type="text" id="input_colmeia"> 
+    <br><br>
+    Temperatura da colmeia (°C): 
+    <input type="text" id="input_temperatura">
+    <br><br>
+    Quantidade de mel produzido no mês (kg):
+    <input type="text" id="input_mel">
+    <br><br>
+    <button onclick="calcular()">Realizar Calculo</button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+
+        var id = Number(input_colmeia.value);
+        var temperatura = Number(input_temperatura.value);
+        var melProduzido = Number(input_mel.value);
+
+        var resultado = melProduzido * 58; 
+
+        div_mensagem.innerHTML = `A colmeia ${id}, se manteve na temperatura ${temperatura}°C, 
+        a quantidade de ${melProduzido}kg de mel por semana, terá um lucro de R$${resultado}`
+
+    }   
+</script>
